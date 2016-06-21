@@ -1,0 +1,23 @@
+        .container
+            if user.userText
+              .col-md-10
+                h2
+                    small#uName.pull-left.text-danger #{user.userText}
+                br
+                h1(style='display: block;') Add Comments to Videos!
+                p Select video, start playing, add comments and share with your friends.
+              .col-md-2
+                #signIn.pull-right.btn.btn-warning.btn-lg(ng-click='clickSignIn()', data-toggle='tooltip', data-placement='left', title=user.toolTip)
+                  span#userImage.fa.fa-user
+                  | #{user.button}
+                  img(src=user.picture, height='32', width='32')
+            else
+              .col-md-10
+                h1.pull-up(style='display: block;') Add Comments to Videos!
+                p Select video, start playing, add comments and share with your friends.
+              .col-md-2
+                #signIn.pull-right.btn.btn-warning.btn-lg(ng-click='clickSignIn()', data-toggle='tooltip', data-placement='left', title=user.toolTip)
+                    span#userImage.fa.fa-user
+                    | #{user.button}
+                    img(src=user.picture, height='32', width='32')
+            #userid(data-userid=user.userID)
